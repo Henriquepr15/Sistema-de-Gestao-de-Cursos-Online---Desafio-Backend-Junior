@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Inicial - Cursos Online</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Cursos Online</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin">Admin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="container mt-5">
+      <h1 class="mb-4 text-center">
+        Bem-vindo à API de Gerenciamento de Cursos Online!
+      </h1>
+
+      <!-- Seção de Cursos -->
+      <div class="card mb-4">
+        <div class="card-header bg-primary text-white">Cursos Disponíveis</div>
+        <div class="card-body">
+          <ul class="list-group">
+            {% for course in courses %}
+            <li class="list-group-item">
+              <strong>{{ course.title }}</strong>
+              <p>{{ course.description }}</p>
+              <small><em>Carga Horária:</em> {{ course.workload }} horas</small
+              ><br />
+              <small><em>Instrutor:</em> {{ course.instructor.name }}</small>
+              <br />
+              <a href="#" class="btn btn-sm btn-info mt-2">Detalhes do Curso</a>
+            </li>
+            {% empty %}
+            <p class="text-danger">Nenhum curso cadastrado.</p>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Seção de Professores -->
+      <div class="card mb-4">
+        <div class="card-header bg-success text-white">Professores</div>
+        <div class="card-body">
+          <ul class="list-group">
+            {% for professor in professors %}
+            <li class="list-group-item">
+              {{ professor.name }} - <em>Email:</em> {{ professor.email }}
+            </li>
+            {% empty %}
+            <p class="text-danger">Nenhum professor cadastrado.</p>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Seção de Alunos -->
+      <div class="card mb-4">
+        <div class="card-header bg-info text-white">Alunos</div>
+        <div class="card-body">
+          <ul class="list-group">
+            {% for student in students %}
+            <li class="list-group-item">
+              {{ student.name }} - <em>Email:</em> {{ student.email }}
+            </li>
+            {% empty %}
+            <p class="text-danger">Nenhum aluno cadastrado.</p>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Seção de Aulas -->
+      <div class="card mb-4">
+        <div class="card-header bg-warning text-white">Agenda de Aulas</div>
+        <div class="card-body">
+          <ul class="list-group">
+            {% for lesson in lessons %}
+            <li class="list-group-item">
+              <strong>{{ lesson.topic }}</strong> - {{
+              lesson.date_time|date:"d/m/Y H:i" }} <br /><em>Curso:</em> {{
+              lesson.course.title }}
+            </li>
+            {% empty %}
+            <p class="text-danger">Nenhuma aula agendada.</p>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-light text-center mt-5 py-3">
+      <p>&copy; 2024 Cursos Online. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

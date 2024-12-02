@@ -1,9 +1,13 @@
-# Sistema-de-Gestao-de-Cursos-Online---Desafio-Backend-Junior
+# Sistema de Gestão de Cursos Online---Desafio-Backend-Junior
 
-Sistema de Gestão de Cursos Online - Documentação Técnica
-Objetivos
+Sistema de Gestão de Cursos Online - Desafio Backend Júnior
+
+Descrição do Projeto
 Este projeto foi desenvolvido como parte de um desafio técnico para a posição de Desenvolvedor Backend Junior. O objetivo é criar uma API RESTful utilizando Django e SQL Server para o gerenciamento de cursos online. A aplicação inclui funcionalidades como cadastro de cursos, professores, alunos, matrículas e agendamento de aulas.
+
+
 Estrutura do Projeto
+
 O projeto está estruturado da seguinte forma:
 - `online_courses/`: Diretório principal do projeto contendo as configurações globais do Django.
 - `courses/`: Aplicação principal com os modelos, visualizações e serializers.

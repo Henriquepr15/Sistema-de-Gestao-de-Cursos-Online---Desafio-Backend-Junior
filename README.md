@@ -32,7 +32,7 @@ Configuração atual no arquivo `settings.py`:
 - OPTIONS: Configurações adicionais, como driver ODBC.
 - 
 Problemas encontrados:
-1. Conexão com o servidor SQL Server ainda não foi estabelecida devido a erros de configuração do servidor.
+Conexão com o servidor SQL Server ainda não foi estabelecida devido a erros de configuração do servidor via Docker.desktops.
 
 
 Banco de dados

@@ -30,11 +30,19 @@ Configuração atual no arquivo `settings.py`:
 - PASSWORD: Senha do SQL Server.
 - HOST: Host do servidor SQL.
 - OPTIONS: Configurações adicionais, como driver ODBC.
+- 
 Problemas encontrados:
 1. Conexão com o servidor SQL Server ainda não foi estabelecida devido a erros de configuração do servidor.
-2. Instalação do SQL Server Developer Edition apresentou falhas e está sendo corrigida.
+
+
+Banco de dados
+Este projeto utiliza o SQLite, o banco de dados padrão do Django, ideal para desenvolvimento por sua simplicidade e integração direta. O SQLite armazena os dados localmente em um único arquivo (db.sqlite3), facilitando o gerenciamento e a portabilidade do projeto. É uma solução eficiente para ambientes de teste e APIs pequenas, mas não recomendada para produção em larga escala.
+
+
+
 
 Criação de ADM
+
 ![image](https://github.com/user-attachments/assets/067d9a99-263b-4447-848d-18d94bb66cca)
 
 URLs da API e Como Usá-las

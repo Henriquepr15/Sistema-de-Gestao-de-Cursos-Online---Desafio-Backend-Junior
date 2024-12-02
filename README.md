@@ -43,6 +43,45 @@ Banco de dados
 Este projeto utiliza o SQLite, o banco de dados padrão do Django, ideal para desenvolvimento por sua simplicidade e integração direta. O SQLite armazena os dados localmente em um único arquivo (db.sqlite3), facilitando o gerenciamento e a portabilidade do projeto. É uma solução eficiente para ambientes de teste e APIs pequenas, mas não recomendada para produção em larga escala.
 
 
+Como Executar o Projetos
+1. **Crie e Ative um Ambiente Virtual**:
+- **Windows**:
+  ```bash
+  python -m venv venv
+  .\venv\Scripts\activate
+  ```
+- **Linux/Mac**:
+  ```bash
+  python3 -m venv venv
+  source venv/bin/activate
+  ```
+
+2. **Instale as Dependências**:
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+3. **Configure o Banco de Dados (SQLite)**:
+- Aplique as migrações para configurar o banco de dados:
+  ```bash
+  python manage.py makemigrations
+  python manage.py migrate
+  ```
+
+4. **Crie um Superusuário (Opcional)**:
+- Para acessar o painel administrativo:
+  ```bash
+  python manage.py createsuperuser
+  ```
+
+5. **Inicie o Servidor**:
+  ```bash
+  python manage.py runserver
+  ```
+
+6. **Acesse o Projeto**:
+- API: [http://127.0.0.1:8000/api/](http://127.0.0.1:8000/api/)
+- Painel Administrativo: [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 
 
 Criação de ADM

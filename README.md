@@ -19,6 +19,10 @@ Descrição dos Arquivos
 Implementação via SQL Server
 A implementação com SQL Server ainda está em andamento. O banco de dados foi configurado no arquivo `settings.py` com o uso do driver `django-mssql-backend` e a instalação do ODBC Driver 17 para SQL Server.
 
+  Pagina inicial
+
+  ![image](https://github.com/user-attachments/assets/1c3d2fda-1374-4392-be0d-c012ece45674)
+
 Configuração atual no arquivo `settings.py`:
 - ENGINE: 'mssql'
 - NAME: Nome do banco de dados.
@@ -29,3 +33,33 @@ Configuração atual no arquivo `settings.py`:
 Problemas encontrados:
 1. Conexão com o servidor SQL Server ainda não foi estabelecida devido a erros de configuração do servidor.
 2. Instalação do SQL Server Developer Edition apresentou falhas e está sendo corrigida.
+
+Criação de ADM
+![image](https://github.com/user-attachments/assets/067d9a99-263b-4447-848d-18d94bb66cca)
+
+URLs da API e Como Usá-las
+Professores (Professors)
+URL: http://127.0.0.1:8000/api/professors/
+Descrição: Use esta URL para listar, criar, atualizar ou deletar professores.
+
+Cursos (Courses)
+URL: http://127.0.0.1:8000/api/courses/
+Descrição: Use esta URL para listar, criar, atualizar ou deletar cursos.
+
+Estudantes (Students)
+URL: http://127.0.0.1:8000/api/students/
+Descrição: Use esta URL para listar, criar, atualizar ou deletar estudantes.
+
+Matrículas (Enrollments)
+URL: http://127.0.0.1:8000/api/enrollments/
+Descrição: Use esta URL para listar, criar, atualizar ou deletar matrículas.
+
+Aulas (Lessons)
+URL: http://127.0.0.1:8000/api/lessons/
+Descrição: Use esta URL para listar, criar, atualizar ou deletar aulas.
+
+imagens do uso da API
+
+![image](https://github.com/user-attachments/assets/6bbc3875-392e-432f-bae2-e1aa8af7127a)
+![image](https://github.com/user-attachments/assets/8515c774-5370-4c3f-8006-fc7feac41afb)
+![image](https://github.com/user-attachments/assets/affb3d3b-7006-4b21-a1cd-a42317c94d75)
